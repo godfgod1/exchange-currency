@@ -9,7 +9,7 @@ country_info_url = "https://www.iban.com/currency-codes"
 
 
 def save_countries_info():
-  print('Welcome to a CurrencyConvert PRO 2021 by Songwoo\n ')
+  print('Welcome to a CurrencyConvert PRO 2021 by Sungwoo\n ')
   arr = []
   num = 0
   request = requests.get(country_info_url)
@@ -23,6 +23,7 @@ def save_countries_info():
     code = tr.contents[5].string
     if code == None:
       continue
+    
     arr.append({'num':f"{num}",'country':country,'code':code})
     num += 1
   
